@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_marginStart="50dp"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginRight="50dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10sp">
+
+        <ImageButton
+            android:id="@+id/id1"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:gravity="center_horizontal"
+            android:onClick="challenge"
+            android:src="@drawable/challenge"
+            android:text="@string/cardio"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:capitalize="characters"
+            android:fontFamily="@font/aldrich"
+            android:onClick="challenge"
+            android:text="CHALLENGE OF THE WEEK"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="24sp"
+            android:textStyle="bold"></TextView>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10sp">
+
+        <ImageButton
+            android:id="@+id/id"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:gravity="center_horizontal"
+            android:onClick="cardio"
+            android:src="@drawable/challenge"
+            android:text="@string/cardio"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:capitalize="characters"
+            android:fontFamily="@font/aldrich"
+            android:onClick="cardio"
+            android:text="CARDIO"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="34sp"
+            android:textStyle="bold"></TextView>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10sp">
+
+        <ImageButton
+            android:id="@+id/id3"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:gravity="center_horizontal"
+            android:onClick="flexibility"
+            android:src="@drawable/challenge"
+            android:text="@string/cardio"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:capitalize="characters"
+            android:fontFamily="@font/aldrich"
+            android:onClick="flexibility"
+            android:text="FLEXIBILITY"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="34sp"
+            android:textStyle="bold"></TextView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10sp">
+
+        <ImageButton
+            android:id="@+id/id4"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:gravity="center_horizontal"
+            android:onClick="strength"
+            android:src="@drawable/challenge"
+            android:text="@string/cardio"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:capitalize="characters"
+            android:fontFamily="@font/aldrich"
+            android:onClick="strength"
+            android:text="STRENGTH"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</LinearLayout>
