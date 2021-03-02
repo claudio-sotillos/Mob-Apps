@@ -20,10 +20,45 @@
         <activity
             android:name=".Levelexercise"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FlexibilityLevel"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StrengthLevel"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Cardiolevel"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CardioLow"
+            android:parentActivityName=".Cardiolevel" />
+        <activity android:name=".CardioLowActivity"
+            android:parentActivityName=".CardioLow"></activity>
+        <activity
+            android:name=".CardioMedium"
+            android:parentActivityName=".Cardiolevel" />
+        <activity
+            android:name=".CardioHigh"
+            android:parentActivityName=".Cardiolevel" />
+        <activity
+            android:name=".FlexHigh"
+            android:parentActivityName=".FlexibilityLevel" />
+        <activity
+            android:name=".FlexMedium"
+            android:parentActivityName=".FlexibilityLevel" />
+        <activity
+            android:name=".FlexLow"
+            android:parentActivityName=".FlexibilityLevel" />
+        <activity
+            android:name=".StrHigh"
+            android:parentActivityName=".StrengthLevel" />
+        <activity
+            android:name=".StrMedium"
+            android:parentActivityName=".StrengthLevel" />
+        <activity
+            android:name=".StrLow"
+            android:parentActivityName=".StrengthLevel" />
 
-        <activity android:name=".FlexibilityLevel" android:parentActivityName=".MainActivity" ></activity>
-        <activity android:name=".StrengthLevel" android:parentActivityName=".MainActivity" />
-        <activity android:name=".Cardiolevel" android:parentActivityName=".MainActivity" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

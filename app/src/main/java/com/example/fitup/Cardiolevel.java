@@ -14,7 +14,15 @@ public class Cardiolevel extends AppCompatActivity {
         setContentView(R.layout.activity_cardiolevel);
     }
     public void cardiolow(View v){
-        Intent inte=new Intent(this,Cardiolow.class);
+        Intent inte=new Intent(this,CardioLow.class);
+        startActivity(inte);
+    }
+    public void cardiomedium(View v){
+        Intent inte=new Intent(this,CardioMedium.class);
+        startActivity(inte);
+    }
+    public void cardiohigh(View v){
+        Intent inte=new Intent(this,CardioMedium.class);
         startActivity(inte);
     }
 }

@@ -11,7 +11,7 @@
     android:layout_marginEnd="50dp"
     android:layout_marginRight="50dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".FlexibilityLevel">
 
 
 
@@ -20,6 +20,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:onClick="flexlow"
             android:id="@+id/id"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -35,6 +36,7 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
+            android:onClick="flexlow"
             android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -55,6 +57,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:onClick="flexmedium"
             android:id="@+id/id3"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -70,6 +73,7 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
+            android:onClick="flexmedium"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -89,6 +93,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:onClick="flexhigh"
             android:id="@+id/id4"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -104,6 +109,7 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
+            android:onClick="flexhigh"
             android:layout_width="209dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -10,13 +10,13 @@
     android:layout_marginTop="15dp"
     android:layout_marginEnd="50dp"
     android:layout_marginRight="50dp"
-    tools:context=".MainActivity">
+    tools:context=".Cardiolevel">
 
 
   <FrameLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:onClick="cardiolow">
+      >
 
     <ImageButton
         android:id="@+id/id"
@@ -26,6 +26,8 @@
         android:src="@drawable/challenge"
         android:text="@string/cardio"
         android:textAlignment="center"
+
+        android:onClick="cardiolow"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +41,7 @@
         android:layout_gravity="center"
         android:capitalize="characters"
         android:fontFamily="@font/aldrich"
-
+        android:onClick="cardiolow"
         android:text="CARDIO LOW"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -51,9 +53,11 @@
 
   <FrameLayout
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
+      android:layout_height="wrap_content"
+      >
 
     <ImageButton
+        android:onClick="cardiomedium"
         android:id="@+id/id3"
         android:layout_width="250dp"
         android:layout_height="150dp"
@@ -69,6 +73,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:onClick="cardiomedium"
         android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -88,6 +93,7 @@
       android:layout_height="wrap_content">
 
     <ImageButton
+        android:onClick="cardiohigh"
         android:id="@+id/id4"
         android:layout_width="250dp"
         android:layout_height="150dp"
@@ -104,6 +110,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:onClick="cardiohigh"
         android:layout_width="209dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
