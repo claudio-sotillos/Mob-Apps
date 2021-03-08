@@ -15,7 +15,7 @@ public class CardioLow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardio_low);
         recyclerview= findViewById(R.id.cardiolow_recycler_view);
-        adapter = new CardioLowAdapter();
+        adapter = new CardioLowAdapter(getApplicationContext());
         layoutmanager= new LinearLayoutManager(this);
         recyclerview.setAdapter(adapter);
         recyclerview.setLayoutManager(layoutmanager);
