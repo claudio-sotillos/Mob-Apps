@@ -5,10 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CardioLow">
+
+
+
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/listofcardiolowexercises"-->
+<!--            android:isScrollContainer="true"/>-->
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardiolow_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/cardiolow_recycler_view"></androidx.recyclerview.widget.RecyclerView>
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:src="@drawable/start_button"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardiolow_recycler_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
