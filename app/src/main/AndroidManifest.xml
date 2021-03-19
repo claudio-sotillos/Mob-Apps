@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fitup">
+    package="com.example.fitup"
+    >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <supports-screens android:smallScreens="false"
+        android:normalScreens="false"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FitUp">
 
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.FitUp">
+        <activity android:name=".WorkoutInfo"></activity>
+        <activity android:name=".MainActivity" android:maxAspectRatio="2.4"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,8 +42,9 @@
         <activity
             android:name=".CardioLow"
             android:parentActivityName=".Cardiolevel" />
-        <activity android:name=".CardioLowActivity"
-            android:parentActivityName=".CardioLow"></activity>
+        <activity
+            android:name=".CardioLowActivity"
+            android:parentActivityName=".CardioLow" />
         <activity
             android:name=".CardioMedium"
             android:parentActivityName=".Cardiolevel" />
@@ -58,11 +69,17 @@
         <activity
             android:name=".StrLow"
             android:parentActivityName=".StrengthLevel" />
+        <activity
+            android:name=".CardioLowPassThrough"
+            android:noHistory="true" />
+        <activity
+            android:name=".TimerCountDown"
+            android:noHistory="true" />
+        <activity android:name=".Topmenu" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

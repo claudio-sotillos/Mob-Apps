@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Fit Up</string>
+    <string name="app_name">
+        Fit Up
+    </string>
     <string name="cardio">Cardio</string>
+    <string name="flex">FLEX</string>
 </resources>

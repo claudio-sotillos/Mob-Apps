@@ -6,10 +6,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
@@ -18,6 +20,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,13 +32,40 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CardioLowAdapter extends RecyclerView.Adapter<CardioLowAdapter.CardioLowViewHolder> {
+    public List<Exercise> exercises;
+    public CardioLowAdapter(List<Exercise> exercises) {
+        this.exercises = exercises;
+    }
+    public void setExercises(List<Exercise> exercises) {
+        this.exercises = exercises;
+    }
+
+
+
+
+    public List<Exercise> getExercises() {
+        return exercises;
+    }
+
+
+//    exercises= Arrays.asList(
+//            new Exercise("Jumping Jack", "Performed by jumping to a position with the legs spread wide and the hands going overhead and then returning to a position with the feet together and the arms at the sides.", "https://i.pinimg.com/originals/34/cb/99/34cb992c8c0c57e896a22c1036a7c038.gif","https://darebee.com/images/workouts/muscles/recalibrator-workout.jpg",0, 10),
+//            new Exercise("Butt Kicks", "Kicking your shins back behind you to touch your buttocks with the bottom of your foot.", "https://i0.wp.com/thumbs.gfycat.com/ClutteredDentalAdmiralbutterfly-size_restricted.gif?w=1155&h=840","https://fitnessvolt.com/wp-content/uploads/2020/10/butt-kicks-exercise-750x393.jpg",0, 20),
+//            new Exercise("High Knees", "Lift up your left knee to your chest. Switch to lift your right knee to your chest and repeat up to the number of repetitions indicated.", "https://media.istockphoto.com/vectors/high-knees-exercise-woman-colorful-cartoon-vector-illustration-vector-id1273899582?k=6&m=1273899582&s=170667a&w=0&h=gZ9pwVjGG9t-rgkd9aLEsBgqZoBVnlDiV4gwmtRhXVo=","https://i1.wp.com/everything-badminton.com/wp-content/uploads/2020/08/37011101-High-Knee-Sprints_Cardio_medium.png?resize=800%2C538&ssl=1",0, 20),
+//            new Exercise("Seal Jack", "Performed by jumping to a position with the legs spread wide and the hands performing a frontal clap and then returning to a position with the feet together and the arms at the sides.", "https://i.pinimg.com/originals/15/b9/7b/15b97b777b943ff6b4dd9589884b478d.png","https://russhowepti.com/wp-content/uploads/2020/07/EXERCISE-DEMO-jumping-jacks.jpg",0,20),
+//            new Exercise("Alternating Fast Feet", "With your feet at hips width, lower your body down into a half squat position and reach out with your arms in front of you. Hold this body position, then start running as fast as you can on the spot.", "https://assets.menshealth.co.uk/main/assets/156-Sumo-fast-feet-side-centre-side_1.gif?mtime=1502699982","https://www.gymvisual.com/14131/quick-feet-version-2.jpg",1, 15),
+//            new Exercise("Lateral Line Hop", "Jump to opposite side of line and land on forefeet. Continue jumping from side to side landing on forefeet.", "https://i.pinimg.com/originals/96/94/c5/9694c565c29f34641baa6b6df83b5d31.gif","https://russhowepti.com/wp-content/uploads/2020/07/EXERCISE-DEMO-step-jumps.jpg",1,25),
+//            new Exercise("Knee to elbow", "Stand with your feet shoulder width apart. Bend your arms and place your hands behind your head. Move each knee to the opposite elbow, while alternating sides. Squeeze your abs.", "https://media1.popsugar-assets.com/files/thumbor/_p8gv6MnKb0O-Y6r6bhItDjybXo/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/12/13/004/n/1922729/615e90366c4db264_8.-Standing-elbow-to-knee/i/Circuit-3-Standing-Elbow--Knee.jpg","https://chunkfitness.com/sites/default/files/situps-elbow-to-knee-twist_1.jpg",0,10));
+
     public static class CardioLowViewHolder extends RecyclerView.ViewHolder{
-        public LinearLayout containerview;
+        public CardView containerview;
         public TextView textview;
+        public ImageView animationview;
         CardioLowViewHolder(View view) {
             super(view);
             containerview = view.findViewById(R.id.cardiolow_row);
             textview = view.findViewById(R.id.cardiolow_row_text_view);
+            animationview=view.findViewById(R.id.cardio_animation_row_view);
 
             containerview.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -53,46 +84,9 @@ public class CardioLowAdapter extends RecyclerView.Adapter<CardioLowAdapter.Card
         }
 
     }
-//    private List<Exercise>  exercises= Arrays.asList(
-//            new Exercise("Push-ups"),
-//            new Exercise("Run"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile"),
-//            new Exercise("Run-treadmile"),new Exercise("Run-treadmile")
-//
-//
-//
-//
-//            );
 
-    private List<Exercise>  exercises= Arrays.asList(
-            new Exercise("Jumping Jack", "Performed by jumping to a position with the legs spread wide and the hands going overhead and then returning to a position with the feet together and the arms at the sides.", "https://i.pinimg.com/originals/34/cb/99/34cb992c8c0c57e896a22c1036a7c038.gif","https://darebee.com/images/workouts/muscles/recalibrator-workout.jpg",0, 10),
-            new Exercise("Butt Kicks", "Kicking your shins back behind you to touch your buttocks with the bottom of your foot.", "https://i0.wp.com/thumbs.gfycat.com/ClutteredDentalAdmiralbutterfly-size_restricted.gif?w=1155&h=840","https://fitnessvolt.com/wp-content/uploads/2020/10/butt-kicks-exercise-750x393.jpg",0, 20),
-            new Exercise("High Knees", "Lift up your left knee to your chest. Switch to lift your right knee to your chest and repeat up to the number of repetitions indicated.", "https://media.istockphoto.com/vectors/high-knees-exercise-woman-colorful-cartoon-vector-illustration-vector-id1273899582?k=6&m=1273899582&s=170667a&w=0&h=gZ9pwVjGG9t-rgkd9aLEsBgqZoBVnlDiV4gwmtRhXVo=","https://i1.wp.com/everything-badminton.com/wp-content/uploads/2020/08/37011101-High-Knee-Sprints_Cardio_medium.png?resize=800%2C538&ssl=1",0, 20),
-            new Exercise("Seal Jack", "Performed by jumping to a position with the legs spread wide and the hands performing a frontal clap and then returning to a position with the feet together and the arms at the sides.", "https://i.pinimg.com/originals/15/b9/7b/15b97b777b943ff6b4dd9589884b478d.png","https://russhowepti.com/wp-content/uploads/2020/07/EXERCISE-DEMO-jumping-jacks.jpg",0,20),
-            new Exercise("Alternating Fast Feet", "With your feet at hips width, lower your body down into a half squat position and reach out with your arms in front of you. Hold this body position, then start running as fast as you can on the spot.", "https://assets.menshealth.co.uk/main/assets/156-Sumo-fast-feet-side-centre-side_1.gif?mtime=1502699982","https://www.gymvisual.com/14131/quick-feet-version-2.jpg",1, 15),
-            new Exercise("Lateral Line Hop", "Jump to opposite side of line and land on forefeet. Continue jumping from side to side landing on forefeet.", "https://i.pinimg.com/originals/96/94/c5/9694c565c29f34641baa6b6df83b5d31.gif","https://russhowepti.com/wp-content/uploads/2020/07/EXERCISE-DEMO-step-jumps.jpg",1,25),
-            new Exercise("Knee to elbow", "Stand with your feet shoulder width apart. Bend your arms and place your hands behind your head. Move each knee to the opposite elbow, while alternating sides. Squeeze your abs.", "https://media1.popsugar-assets.com/files/thumbor/_p8gv6MnKb0O-Y6r6bhItDjybXo/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/12/13/004/n/1922729/615e90366c4db264_8.-Standing-elbow-to-knee/i/Circuit-3-Standing-Elbow--Knee.jpg","https://chunkfitness.com/sites/default/files/situps-elbow-to-knee-twist_1.jpg",0,10));
-//    private RequestQueue requestQueue;
+
+   //    private RequestQueue requestQueue;
 //    CardioLowAdapter(Context context){
 //        requestQueue= Volley.newRequestQueue(context);
 //        loadExercises();
@@ -129,6 +123,7 @@ public class CardioLowAdapter extends RecyclerView.Adapter<CardioLowAdapter.Card
 //
 //        requestQueue.add(request);
 //    }
+// Adaptar el objeto de recyled view a una list
 
     @NonNull
     @Override
@@ -141,8 +136,13 @@ public class CardioLowAdapter extends RecyclerView.Adapter<CardioLowAdapter.Card
     @Override
     public void onBindViewHolder(@NonNull CardioLowViewHolder holder, int position) {
             Exercise excurrent=exercises.get(position);
-            holder.textview.setText(excurrent.getName());
-            holder.containerview.setTag(excurrent);
+
+            holder.textview.setText(String.valueOf(position+1)+"."+excurrent.getName());
+            Glide.with(holder.itemView.getContext()).load(excurrent.getExercise_url()).diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(holder.animationview);
+
+
+        holder.containerview.setTag(excurrent);
     }
 
     @Override

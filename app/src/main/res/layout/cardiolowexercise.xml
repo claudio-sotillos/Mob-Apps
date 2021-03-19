@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
     android:id="@+id/cardiolow_row"
     android:clickable="true"
     android:focusable="true"
     android:padding="10dp">
-    <TextView
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/cardiolow_row_text_view"/>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/cardio_animation_row_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_alignParentLeft="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="400dp"
+
+            android:layout_toRightOf="@+id/cardio_animation_row_view"
+
+            >
+            <TextView
+                android:layout_marginLeft="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+
+
+                android:text="HOLA"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/aldrich"
+                android:textStyle="bold"
+                android:id="@+id/cardiolow_row_text_view"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
 
 
 </LinearLayout>
+</androidx.cardview.widget.CardView>

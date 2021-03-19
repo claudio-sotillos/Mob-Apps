@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardioLowPassThrough">
+
+    <TextView
+        android:id="@+id/nameofexercises"
+
+        android:layout_width="91dp"
+        android:layout_height="39dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:text="100sp"
+        app:layout_constraintBottom_toTopOf="@+id/nextexercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <ImageView
+        android:id="@+id/animationgif"
+        android:layout_width="82dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextexercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameofexercises"
+        app:layout_constraintVertical_bias="0.169" />
+
+
+    <TextView
+        android:id="@+id/amountcontent"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/nextexercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animationgif"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <TextView
+        android:id="@+id/text_countdown"
+        android:layout_width="158dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/nextexercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountcontent"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <Button
+        android:id="@+id/nextexercise"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="244dp"
+        android:text="NEXT"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

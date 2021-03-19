@@ -1,162 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/mybackgro"
 
-    android:layout_marginStart="50dp"
-    android:layout_marginLeft="50dp"
-    android:layout_marginTop="15dp"
-    android:layout_marginEnd="50dp"
-    android:layout_marginRight="50dp"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10sp">
 
-        <ImageButton
-            android:id="@+id/id1"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:gravity="center_horizontal"
+    >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:columnCount="2"
+        android:rowCount="2"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+
             android:onClick="challenge"
-            android:src="@drawable/challenge"
-            android:text="@string/cardio"
-            android:textAlignment="center"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:layout_width="193dp"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+
+                android:gravity="center"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chalscaled"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WEEKLY\n CHALLENGE"
+                    android:fontFamily="@font/aldrich"
+                    android:textStyle="bold"
+
+                    android:textAlignment="center">
+
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:capitalize="characters"
-            android:fontFamily="@font/aldrich"
-            android:onClick="challenge"
-            android:text="CHALLENGE OF THE WEEK"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="24sp"
-            android:textStyle="bold"></TextView>
-
-    </FrameLayout>
-
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10sp">
-
-        <ImageButton
-            android:id="@+id/id"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:gravity="center_horizontal"
-            android:onClick="cardio"
-            android:src="@drawable/challenge"
-            android:text="@string/cardio"
-            android:textAlignment="center"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:capitalize="characters"
-            android:fontFamily="@font/aldrich"
-            android:onClick="cardio"
-            android:text="CARDIO"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="34sp"
-            android:textStyle="bold"></TextView>
-
-    </FrameLayout>
-
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10sp">
-
-        <ImageButton
-            android:id="@+id/id3"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:gravity="center_horizontal"
-            android:onClick="flexibility"
-            android:src="@drawable/challenge"
-            android:text="@string/cardio"
-            android:textAlignment="center"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:layout_width="216dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:capitalize="characters"
-            android:fontFamily="@font/aldrich"
-            android:onClick="flexibility"
-            android:text="FLEXIBILITY"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="34sp"
-            android:textStyle="bold"></TextView>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10sp">
-
-        <ImageButton
-            android:id="@+id/id4"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:gravity="center_horizontal"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
             android:onClick="strength"
-            android:src="@drawable/challenge"
-            android:text="@string/cardio"
-            android:textAlignment="center"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
 
-        <TextView
-            android:layout_width="209dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/strengthscaled"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STRENGTH"
+                    android:fontFamily="@font/aldrich"
+                    android:textStyle="bold"
+                    android:textAlignment="center">
+
+
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:capitalize="characters"
-            android:fontFamily="@font/aldrich"
-            android:onClick="strength"
-            android:text="STRENGTH"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:onClick="cardio"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
 
-    </FrameLayout>
+            >
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:gravity="center"
+                android:orientation="vertical"
+               >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:src="@drawable/cardioscaled"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CARDIO"
+                    android:fontFamily="@font/aldrich"
+                    android:textStyle="bold"
+                    android:textAlignment="center">
+
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:onClick="flexibility"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yogascaled"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FLEXIBLE"
+                    android:fontFamily="@font/aldrich"
+                    android:textStyle="bold"
+                    android:textAlignment="center">
+
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+
+</RelativeLayout>

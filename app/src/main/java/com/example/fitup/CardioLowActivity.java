@@ -39,42 +39,42 @@ public class CardioLowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_cardio_low_activity);
+//        Conseguir la informacion del adapter
         String name = getIntent().getStringExtra("name");
         String descr = getIntent().getStringExtra("description");
         String exercise_url = getIntent().getStringExtra("exercise_url");
         String work_url = getIntent().getStringExtra("work_url");
         String hastiming = getIntent().getStringExtra("timer");
-//        Drawable imageurl=LoadImageFromWebOperations(work_url);
-
+//      Asignar cada recurso del layout textvie imageview a una variable de java
         nameexercise = findViewById(R.id.cardilow_name);
         descrexercise = findViewById(R.id.cardilow_description);
-//        urlexercise = findViewById(R.id.cardilow_string_url);
-//        work_urlexercise = findViewById(R.id.cardilow_work_url);
+
         amountexercise = findViewById(R.id.cardilow_rep);
         image_string_url=findViewById(R.id.cardiolowstring_image);
         image_work_url=findViewById(R.id.cardiolowstring_work_image);
+//        Asignar la informacion de los atributos del objeto ejercicio a los recursos del layout que acabas de asignar en las variables
         if (image_string_url != null)
             Glide.with(this).load(exercise_url).diskCacheStrategy(DiskCacheStrategy.ALL).into(image_string_url);
 
 
 
-//        Glide.with(this).load(exercise_url).into(image_string_url);
         Glide.with(this).load(work_url).into(image_work_url);
         nameexercise.setText(name);
         descrexercise.setText(descr);
-//        urlexercise.setText(exercise_url);
-//        work_urlexercise.setText(work_url);
+
 
 
         if (hastiming.equals("0")) {
-            String amount = getIntent().getStringExtra("amount") + "Repetitions";
+            String amount = getIntent().getStringExtra("amount") + " Repetitions";
             amountexercise.setText(amount);
         } else {
-            String amount = getIntent().getStringExtra("amount") + "Seconds";
+            String amount = getIntent().getStringExtra("amount") + " Seconds";
+
             amountexercise.setText(amount);
         }
 
 
     }
+
 
 }
